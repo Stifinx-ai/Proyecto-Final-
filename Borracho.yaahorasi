@@ -4,7 +4,7 @@
 #define BEBIDAS 8
 
 void mostrarMenuBebidas() {
-    printf("=== Menú de Bebidas ===\n");
+    printf("Bebidas\n");
     printf("0 - Agua natural\n");
     printf("1 - Refresco\n");
     printf("2 - Vino\n");
@@ -27,12 +27,18 @@ void llenarMatriz(int **arr, int pueblos)
         scanf("%d", &bebida);
         while (bebida != -1) 
         {
+            
             if (bebida >= 0 && bebida < BEBIDAS) 
+            
             {
                 printf("¿Cuántos litros consumieron?: ");
                 scanf("%d", &litros);
                 arr[i][bebida] += litros;
-            } else {
+            } 
+            
+            else 
+            
+            {
                 printf("Opción inválida.\n");
             }
             printf("Elige otra bebida o -1 para terminar: ");
